@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="validateExercise3.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Form</h1>
+        <form class="myForm" action="">
+            <div class="form-group">
+                <div class="row">
+                    <label class="control-label col-sm-2" required>Username:</label>
+                    <div class="col-sm-10">
+                        <input type="username" class="form-control" id="username" placeholder="Enter username"
+                            name="username">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <label class="control-label col-sm-2">Phone:</label>
+                    <div class="col-sm-10">
+                        <input id="number" type="tel" pattern="^\d{3}-\d{3}-\d{4}$" class="form-control"
+                            placeholder="Enter phone number (10 Numbers)" name="phone">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <label class="control-label col-sm-2">Password:</label>
+                    <div class="col-sm-10">
+                        <input id="pass" type="password" class="form-control" 
+                            placeholder="Enter password"
+                            name="password" pattern="(?=.*\d)(?=.*[a-z, A-Z])(?=.*[_]).{6,20}">
+                    </div>
+                </div>
+                <div class = "row">**Password must be between 6 and 20 characters long where the
+                        accepted characters are numbers, letters and underscore**</div>
+            </div>
+    </div>
+    <div class="form-group">
+            <div class = "col-lg-10">
+            <button type="Submit" class="btn btn-primary" onClick="validate(this.form)">Enter</button>
+    </div>
+    </div>
+    </form>
+    </div>
+</body>
+
+</html>
